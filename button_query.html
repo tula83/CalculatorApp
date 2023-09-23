@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Button_query</title>
+        <style>
+            #main {
+                margin: 1em 1rem 1rem;
+                text-align: center;
+                align-items: center;
+                border: 2px solid slateblue;
+
+            }
+            input,
+            button {
+                margin: 1rem;
+                text-align: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+         <input type="text" id="email" placeholder="enter your email">
+         <form method="post" id="main">
+
+       
+
+            <input type="text" id="name" placeholder="enter your name" required>
+            <br>
+            <input type="text" id="id" placeholder="id" required>
+            <br>
+
+            <!-- //<button id="submit" type="submit" onclick="submit_handle()">Submit</button> -->
+            <input type="submit">
+            <br>
+            <button id="cancel" type="submit"  onsubmit="cancel_handle(e)">Cancel</button> 
+            
+        
+        
+    </form>
+
+        <script>
+            let email;
+           
+            let name=document.getElementById("name");
+            let id=document.getElementById("id");
+            
+           function submit_handle(e){
+              e.preventDeafault();
+              
+              console.log(name.value)
+             
+                
+           }
+            
+        </script>
+
+    </body>
+</html>

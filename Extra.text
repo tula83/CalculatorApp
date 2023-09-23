@@ -1,0 +1,39 @@
+ keys.addEventListener('click', e => {
+
+                if (e.target.matches('button')) {
+                    const num = e.target;
+                    const action = num.dataset.action;
+
+                    // console.log(num.dataset)
+
+                    if (action) {
+                        console.log(action)
+                        if (action === 'add') 
+                            console.log('add')
+                        
+                        if (action === 'subtract') 
+                            console.log('subtract')
+                        
+                        if (action === 'multiply') 
+                            console.log('multiply')
+                        
+                        if (action === 'divide') 
+                            console.log('divide')
+                        
+                        if (action === 'clear') 
+                            console.log('clear')
+                        
+                        if (action === 'calculate') 
+                            console.log('calculate')
+
+
+                        
+
+
+                    } else {
+                        console.log("number")
+                    }
+
+                }
+
+            })

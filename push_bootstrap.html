@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <abbr title = "World Wide Web">WWW</abbr><br>
+    <abbr title = "Real Simple Syndication" class = "initialism">RSS</abbr>
+<div class="container-fluid m-10" >
+  <h1>Push and Pull</h1>
+  <p>Resize the browser window to see the effect.</p>
+  
+  <div class="row">
+    <div class="col-sm-4 col-sm-push-8" style="background-color:lavender;">.col-sm-4 .col-sm-push-8</div>
+    <div class="col-sm-8 col-sm-pull-4" style="background-color:lavenderblush;">.col-sm-8 .col-sm-pull-4</div>
+  </div>
+
+   <div class="table responsive">
+
+  <table class="table table-hover">
+   <caption>Stripped table</caption>
+   <thead>
+      <tr class="success">
+          <th>name</th>
+          <th>city</th>
+          <th>phone</th>
+      </tr>
+   </thead>
+   <tbody>
+     <tr class="warning">
+        <td>tula</td>
+        <td>tulsipur</td>
+        <td>9818181</td>
+     </tr>
+
+     <tr>
+        <td>Sachin</td>
+        <td>Mumbai</td>
+        <td>400003</td>
+     </tr>
+
+   </tbody>
+
+  </table>
+</div>
+
+</div>
+
+<!-- thi i for   file  input -->
+
+<form class = "form m-5 " role = "form" style="background-color: red;">
+   
+    <div class = "form-group">
+       <label class = "sr-only" for = "name">Name</label>
+       <input type = "text" class = "ml-5 form-control" id = "name" placeholder = "Enter Name">
+    </div>
+    
+    <div class = "form-group">
+       <label class = "sr-only" for = "inputfile">File input</label>
+       <input type = "file" id = "inputfile">
+    </div>
+    
+    <div class = "checkbox">
+       <label><input type = "checkbox"> Check me out</label>
+    </div>
+    
+    <button type = "submit" class = "btn btn-default">Submit</button>
+ </form>
+
+
+ <p>
+   <button type = "button" class = "btn btn-primary btn-lg btn-block">
+      Block level Primary button
+   </button>
+   
+   <button type = "button" class = "btn btn-default btn-lg btn-block">
+      Block level button
+   </button>
+</p>
+
+<p>
+   <button type = "button" class = "btn btn-primary btn-lg">
+      Large Primary button
+   </button>
+   
+   <button type = "button" class = "btn btn-default btn-lg">
+      Large button
+   </button>
+</p>
+
+
+<div class="container">
+   
+   <div class = "pull-left" style = "background:#58D3F7;">
+      Quick Float to left
+   </div>
+   
+   <div class = "pull-right" style = "background: #DA81F5;">
+      Quick Float to right
+   </div>
+   
+</div>
+
+    
+</body>
+</html>

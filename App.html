@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="App.css">
+    </head>
+    <body>
+
+
+        <div class="container">
+            <p>
+                This component works exactly like the calculator you know. Click any number to start calculating!
+            </p>
+            <div class="calculator">
+                <div class="calculator__display">0</div>
+
+                <div class="calculator__keys">
+                    <button class="key--operator" data-action="add">+</button>
+                    <button class="key--operator" data-action="subtract">-</button>
+                    <button class="key--operator" data-action="multiply">&times;</button>
+                    <button class="key--operator" data-action="divide">÷</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>0</button>
+                    <button data-action="decimal">.</button>
+                    <button data-action="clear">AC</button>
+                    <button class="key--equal" data-action="calculate">=</button>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            let cal = document.querySelector(".calculator");
+            let keys = cal.querySelector(".calculator__keys");
+             var first;
+
+            let display = document.querySelector(".calculator__display");
+
+            // for displaying
+
+            keys.addEventListener('click', e => {
+                if (e.target.matches('button')) {
+                    const key = e.target
+                    const action = key.dataset.action
+                    const keyContent = key.textContent
+                    const displayedNum = display.textContent
+                   
+                    
+                    
+                    if (!action) {
+                    
+                        
+                        if (displayedNum === '0') 
+                            display.textContent = keyContent
+
+                        
+                        else 
+                            display.textContent = displayedNum + keyContent
+                        
+                    
+                    
+                        }
+                        if (action === 'decimal')
+                           display.textContent = displayedNum + '.'
+
+                        else if (action === 'clear'){
+                             display.textContent=" "
+                        }
+                        else if( action === 'add'){
+                                first=displayedNum;
+                                display.textContent=first+'+'
+                               
+                        }
+
+                        else if( action === 'subtract'){
+                                first=displayedNum;
+                                display.textContent=first+'-'
+                               
+                        }
+                        else if( action === 'divide'){
+                                 first=displayedNum;
+                                display.textContent=first+'/'
+                               
+                        }
+                        else if( action === 'multiply'){
+                                 first=displayedNum;
+                                display.textContent=first+'*'
+                               
+                        }
+                    else if(action === 'calculate'){
+                          let arr=[]
+                          let op=[]
+                          arr=displayedNum.split(/[-+/*]/)
+                          let str=displayedNum
+                        
+
+                      for(let i=0;i<str.length;++i){
+                             if( str[i] === '+'){
+                              
+                                op.push(str[i])
+
+                             }
+                             else if(str[i]==='-')
+                              op.push(str[i])
+                              else if(str[i]==='/')
+                              op.push(str[i])
+                            else if(str[i]==='*')
+                              op.push(str[i])
+                            
+                         }
+                          
+                         if(op[0]==='+')
+                          sum=Number(arr[0])+Number(arr[1])
+                         if(op[0]==='-')
+                          sum=arr[0]-arr[1]
+                         if(op[0]==='*')
+                          sum=arr[0]*arr[1]
+                         if(op[0]==='/')
+                          sum=arr[0]/arr[1]
+
+                        //  console.log(op,arr)
+
+                    let j=1;
+                     for(let i=2;i<arr.length;++i){
+
+                        if(op[j]==='+')
+                          sum=Number(sum)+Number(arr[i])
+                         if(op[j]==='-')
+                          sum=sum-arr[i]
+                         if(op[j]==='*')
+                          sum=sum*arr[i]
+                         if(op[j]==='/')
+                          sum=sum/arr[i]
+                         j+=1
+                          console.log(j)
+                           
+                       }
+                        
+                       
+                  display.textContent=sum
+
+
+                }
+
+
+
+                    
+                }
+
+
+            })
+
+
+           
+        </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+
+.parent{
+     
+   
+    width: 10rem;
+    height:5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    transition: all 0.2 linear;
+   
+      
+}
+.child:nth-child(2n){
+    background-color: #d2dae2;
+}
+
+.child:first-child{
+    background-color: #ef5777;
+}
+
+.child:last-child{
+     background-color: #ffa801;
+}
+
+.child
+{
+   
+    height: 200px;
+    width: 20px;
+    background-color:aqua;
+    margin: 20px;
+    flex: 1 1 200px;
+}
+@media (max-width: 768px){
+    .grand_parent{height:auto; }
+}
